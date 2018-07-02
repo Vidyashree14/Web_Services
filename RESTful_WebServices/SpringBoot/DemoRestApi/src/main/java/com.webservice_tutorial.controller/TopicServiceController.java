@@ -25,8 +25,8 @@ public class TopicServiceController {
 		return topicService.getAllTopic();
 	}
   
-  @RequestMapping("/topic_service/{topic_id}")							        // While making request over the browser what we can do is "localhost:8080/topic_service/topic_id" where 'topic_id' can be any existing 'id' value of topic '/topic_service' i.e. Java, Spring, Unit_Testing, etc... 
-	public Topic getTopic(@PathVariable("topic_id") String id){ 			// Here instead of using another variable name for calling "topic_id" i.e. (@PathVariable("topic_id") String id), we can use "id" itself i.e. (@PathVariable String id)
+  	@RequestMapping("/topic_service/{topic_id}")							        // While making request over the browser what we can do is "localhost:8080/topic_service/topic_id" where 'topic_id' can be any existing 'id' value of topic '/topic_service' i.e. Java, Spring, Unit_Testing, etc... 
+	public Topic getTopic(@PathVariable("topic_id") String id){ 						// Here instead of using another variable name for calling "topic_id" i.e. (@PathVariable("topic_id") String id), we can use "id" itself i.e. (@PathVariable String id)
 		return topicService.getTopic(id);
 	}
 		
